@@ -7,16 +7,6 @@ Created on May 17, 2016
 import logging
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s] - %(levelname)s - %(message)s', datefmt='%Y-%m-%d %H:%M:%S')
 
-DAY_NUM = {
-    'Monday': 0,
-    'Tuesday': 1,
-    'Wednesday': 2,
-    'Thursday': 3,
-    'Friday': 4,
-    'Saturday': 5,
-    'Sunday': 6
-}
-
 BASE_URL = 'https://hardingpark.ezlinks.com/'
 
 USERNAME = ''

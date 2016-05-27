@@ -5,17 +5,27 @@ Created on May 18, 2016
 '''
 
 import datetime
-import settings
+
+
+DAY_NUM = {
+    'Monday': 0,
+    'Tuesday': 1,
+    'Wednesday': 2,
+    'Thursday': 3,
+    'Friday': 4,
+    'Saturday': 5,
+    'Sunday': 6
+}
 
 
 def days_to_dates(days):
     dates = []
     for day in days:
         today = datetime.datetime.today()
-        if today.weekday() == settings.DAY_NUM[day]:
+        if today.weekday() == DAY_NUM[day]:
             dates.append(today+datetime.timedelta(days=14))
         else:
-            while today.weekday() != settings.DAY_NUM[day]:
+            while today.weekday() != DAY_NUM[day]:
                 today = today + datetime.timedelta(days=1)
             today = today + datetime.timedelta(days=7)
             dates.append(today)
